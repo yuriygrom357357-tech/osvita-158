@@ -17,8 +17,13 @@
 a{color:var(--accent)}
 .hero{position:relative;min-height:min(78vh,640px);display:flex;align-items:flex-end;background:#000 url(media/hero.jpg) center/cover no-repeat;border-bottom:1px solid var(--line)}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,12,.15) 0%,rgba(11,13,12,.55) 50%,rgba(11,13,12,.97) 100%)}
-.hero .wrap{position:relative;z-index:1;padding-bottom:48px;width:100%}
+.hero .wrap{position:relative;z-index:1;padding-top:40px;padding-bottom:48px;width:100%}
 .flag{display:inline-flex;gap:0;height:6px;width:56px;margin-bottom:18px}.flag i{flex:1;background:#0057b7}.flag i+i{background:#ffd700}
+.unit{display:inline-flex;align-items:center;gap:16px;margin-bottom:22px;padding:10px 20px 10px 10px;background:rgba(11,13,12,.72);backdrop-filter:blur(6px);border:1px solid rgba(242,181,58,.55);border-left:6px solid var(--accent)}
+.unit .num{font:700 clamp(46px,6vw,68px)/0.9 var(--disp);color:#14100a;background:var(--accent);padding:6px 14px 4px;letter-spacing:.02em}
+.unit .txt{display:flex;flex-direction:column;gap:4px}
+.unit b{font:700 clamp(20px,2.6vw,30px)/1 var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--fg)}
+.unit small{font:600 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .eyebrow{font:600 12px/1.4 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 h1{font:700 clamp(40px,7.5vw,84px)/0.98 var(--disp);text-transform:uppercase;margin:12px 0 16px;letter-spacing:.005em;text-shadow:0 2px 24px rgba(0,0,0,.5)}
 .lede{font-size:clamp(17px,2vw,20px);color:rgba(236,232,220,.86);max-width:58ch;margin:0}
@@ -58,8 +63,10 @@ footer strong{color:var(--fg);font-weight:600}
 <body>
 <header class="hero">
   <div class="wrap">
-    <div class="flag"><i></i><i></i></div>
-    <div class="eyebrow">158 навчальний центр · Збройні Сили України</div>
+    <div class="unit">
+      <span class="num">158</span>
+      <span class="txt"><b>Навчальний центр</b><small>Збройні Сили України</small></span>
+    </div>
     <h1>Новітні технології<br>у підготовці воїнів</h1>
     <p class="lede">Сучасні навчальні застосунки, цифрові курси й тестування, що допомагають готувати військовослужбовців швидше, якісніше та ближче до реалій сучасної війни.</p>
     <nav>
