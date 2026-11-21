@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>158 навчальний центр — цифрові технології навчання</title>
 <meta name="description" content="Навчальні застосунки 158-го навчального центру: курси, тести, конспекти, лекції та бойовий застосунок «Ефір-ШІ».">
+<meta name="build" content="20261121123828">
+<meta http-equiv="Cache-Control" content="no-cache">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="158 навчальний центр — цифрові технології навчання">
 <meta property="og:image" content="media/hero.jpg">
@@ -178,5 +180,11 @@ footer strong{color:var(--fg);font-weight:600}
     <p>Розробник — Юрій Мельничук (позивний «Композитор») · Фаховий аналітик та автор ідей — Ярослав Дудко (позивний «Ярий»).</p>
   </div>
 </footer>
+<script>
+/* Якщо браузер показує збережену стару копію — тихо завантажити свіжу версію сторінки */
+(function(){try{var m=document.querySelector('meta[name=build]');if(!m)return;var mine=m.content;
+fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
+var x=t.match(/name="build" content="(\d+)"/);if(x&&x[1]!==mine){var k='reloaded-'+x[1];if(!sessionStorage.getItem(k)){sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+x[1]+location.hash);}}}).catch(function(){});}catch(e){}})();
+</script>
 </body>
 </html>
